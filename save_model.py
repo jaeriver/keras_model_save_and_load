@@ -14,11 +14,11 @@ from tensorflow.keras.applications import (
     mobilenet_v2
 )
 model_type = 'inception_v3'
-saved_model_dir = f'{model_type}_saved_model'
+saved_model_dir = f'{model_type}'
 
 models = {
 #     'xception':xception.Xception(weights='imagenet',include_top=False),
-#     'vgg16':vgg16.VGG16(weights='imagenet'),
+    'vgg16':vgg16.VGG16(weights='imagenet'),
 #     'vgg19':vgg19.VGG19(weights='imagenet'),
 #     'resnet50':resnet50.ResNet50(weights='imagenet'),
 #     'resnet101':resnet.ResNet101(weights='imagenet'),
@@ -39,5 +39,5 @@ models = {
 #     'mobilenet_v2':mobilenet_v2.MobileNetV2(weights='imagenet')
 }
 
-model = models[model_type](weights='imagenet')
+model = models[model_type]
 model.save(saved_model_dir)
