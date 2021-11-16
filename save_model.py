@@ -13,14 +13,14 @@ from tensorflow.keras.applications import (
     nasnet,
     mobilenet_v2
 )
-model_type = 'xception'
+model_type = 'inception_v3'
 saved_model_dir = f'{model_type}_saved_model'
 
 models = {
-    'xception':xception.Xception(weights='imagenet',include_top=False),
+#     'xception':xception.Xception(weights='imagenet',include_top=False),
 #     'vgg16':vgg16.VGG16(weights='imagenet'),
 #     'vgg19':vgg19.VGG19(weights='imagenet'),
-    'resnet50':resnet50.ResNet50(weights='imagenet'),
+#     'resnet50':resnet50.ResNet50(weights='imagenet'),
 #     'resnet101':resnet.ResNet101(weights='imagenet'),
 #     'resnet152':resnet.ResNet152(weights='imagenet'),
 #     'resnet50_v2':resnet_v2.ResNet50V2(weights='imagenet'),
@@ -28,7 +28,7 @@ models = {
 #     'resnet152_v2':resnet_v2.ResNet152V2(weights='imagenet'),
 #     'resnext50':resnext.ResNeXt50(weights='imagenet'),
 #     'resnext101':resnext.ResNeXt101(weights='imagenet'),
-#     'inception_v3':inception_v3.InceptionV3(weights='imagenet'),
+    'inception_v3':inception_v3.InceptionV3(weights='imagenet'),
 #     'inception_resnet_v2':inception_resnet_v2.InceptionResNetV2(weights='imagenet'),
 #     'mobilenet':mobilenet.MobileNet(weights='imagenet'),
 #     'densenet121':densenet.DenseNet121(weights='imagenet'),
